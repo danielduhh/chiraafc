@@ -1,0 +1,24 @@
+.zoom {
+    position:absolute;
+    z-index: 1000;
+    right:10px;
+    bottom:30px;
+    background-color: #fff;
+}
+
+.zoom .options{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 32px;
+    height: 30px;
+    line-height: 26px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.zoom .options:hover {
+    background-color: rgba(204,204,204,.2);
+}
