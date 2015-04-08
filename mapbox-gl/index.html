@@ -36,13 +36,13 @@
 </div>
 
 <div ng-controller="mapSearch" id="mapSearch">
-    <form ng-submit="getSearchData();getGoogleSearchData()">
+    <form ng-submit="getGoogleSearchData()">
     <div class="searchbox">
         <input type="text" ng-model="searchQuery">
         <div ng-show="searchQuery.length>0" class="suggestions">
-            <div ng-repeat="val in results.features | filter:searchQuery" class="single-result">
-                <div ng-click="goToLocation(val.geometry.coordinates[0],val.geometry.coordinates[1]);changeSearchText(val.properties.formatted)" class="text">
-                    {{val.properties.formatted}}
+            <div ng-repeat="val in results.results | filter:searchQuery" class="single-result">
+                <div ng-click="goToLocation(val.geometry.location.lng,val.geometry.location.lat);changeSearchText(val.formatted_address)" class="text">
+                    {{val.formatted_address}}
                 </div>
             </div>
         </div>

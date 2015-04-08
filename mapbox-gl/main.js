@@ -2391,7 +2391,6 @@ angular.module('mapApp').factory('Outdoors', function() {
 mapApp.controller('mapSearch', function($scope,$http){
 
     var key = '8a42c3b94f75755558242e0875448c1a';
-    var googlekey = 'AIzaSyDTG4khVRJjxVj9XN6uLE2n40uzPXzEVZ8';
 
     $scope.searchQuery = '';
 
