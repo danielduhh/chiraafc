@@ -2391,6 +2391,8 @@ angular.module('mapApp').factory('Outdoors', function() {
 mapApp.controller('mapSearch', function($scope,$http){
 
     var key = '8a42c3b94f75755558242e0875448c1a';
+    var googlekey = 'AIzaSyDTG4khVRJjxVj9XN6uLE2n40uzPXzEVZ8';
+
     $scope.searchQuery = '';
 
     $scope.goToLocation = function(long,lat){
@@ -2400,6 +2402,25 @@ mapApp.controller('mapSearch', function($scope,$http){
 
     $scope.changeSearchText = function(text){
         $scope.searchQuery = text;
+    };
+
+    $scope.getGoogleSearchData = function(){
+        $scope.results = {};
+        var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURI($scope.searchQuery) + '&key=' + googlekey;
+        $http.get(url).
+            success(function (data, status, headers, config) {
+                // this callback will be called asynchronously
+                // when the response is available
+                console.log(data);
+                console.log(url);
+                $scope.results = data;
+
+            }).
+            error(function (data, status, headers, config) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log(data);
+            });
     };
 
     $scope.getSearchData = function() {

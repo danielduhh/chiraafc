@@ -36,7 +36,7 @@
 </div>
 
 <div ng-controller="mapSearch" id="mapSearch">
-    <form ng-submit="getSearchData()">
+    <form ng-submit="getSearchData();getGoogleSearchData()">
     <div class="searchbox">
         <input type="text" ng-model="searchQuery">
         <div ng-show="searchQuery.length>0" class="suggestions">
