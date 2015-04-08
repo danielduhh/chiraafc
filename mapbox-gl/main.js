@@ -2406,7 +2406,7 @@ mapApp.controller('mapSearch', function($scope,$http){
 
     $scope.getGoogleSearchData = function(){
         $scope.results = {};
-        var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURI($scope.searchQuery) + '&key=' + googlekey;
+        var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURI($scope.searchQuery);
         $http.get(url).
             success(function (data, status, headers, config) {
                 // this callback will be called asynchronously
