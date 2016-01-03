@@ -1980,6 +1980,10 @@
 			top: 0.25em;
 		}
 
+		img.logo {
+			height:155px;
+		}
+
 		.image.right {
 			float: right;
 			margin: 0 0 2em 2em;
@@ -2335,7 +2339,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #ed4933;
+            background-color: rgba(255,61,0,.5);
 			box-shadow: none !important;
 			color: #ffffff !important;
 		}
@@ -2668,7 +2672,7 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+            background-color: rgba(255,61,0,.5);
 			color: #c7ebe8;
 		}
 
